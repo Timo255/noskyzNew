@@ -130,14 +130,14 @@ header{
     font-weight: bold;
     position: relative;
     top: 50px;
-    left: 40px;
+    left: 25px;
 }
 .sliderTxt{
     font-size: 15px;
     font-weight: bold;
     position: relative;
     top: 70px;
-    left: 40px;
+    left: 90px;
     color: var(--color3);
 }
 .btn{
