@@ -17,17 +17,11 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 100%;
-    height: 100%;
     overflow-x: hidden;
     background-color: var(--backgroundColor);
     font-family: 'Poppins', sans-serif;
 }
-ul li{
-    text-decoration: none;
-    list-style: none;
-}
-ul li a{
+ a{
     text-decoration: none;
     list-style: none;
 }
@@ -36,77 +30,85 @@ ul li a{
 
   /* header */
 header{
-    background-color: var(--backgroundColor);
+    /* background-color: var(--backgroundColor); */
+    /* background-color: blue; */
     width: 100%;
-    height: 110px;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/*<sticky which is triggered using javascript>*/
+.scrolling-active{
+    background-color:#1A1A1A; 
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1); 
+    height: 100px;
 }
 .wrapper-header{
     max-width: 284px;
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.logo-navbar{
-    /* background-color: blue; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
 .head-logo{
     position: relative;
+    top: 10px;
     right:  30px;
-}
-nav{
-    z-index: 99;
-    /* display: flex;
-    flex-direction: column; */
-    position: absolute;
-    top: 0;
-    right: -100%;
-    width: 61%;
-    height: 50%;
-    background-color: var(--color1);
-    transition: 0.5s;    
-    border-radius: 0 0 0 40%; 
-    /* margin-top: 50px;
-    background-color: var(--color2); */
-}
-#menu{
-    margin-bottom: 50px;
-    cursor: pointer;
-    /* z-index: 100; */
-}
-.navItems{
+} 
+
+.logo-nav-div{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#navBox{
+    display: none;
+}
+#menuBtn{
+    position: relative;
+    top: 0px;
+}
+#closeBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+#navBox.show{
+    z-index: 100;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 50px;
-}
-.show{
+    position: absolute;
     right: 0;
+    top: 0;
+    background-color: #C0C0C0;
+    width: 210px;
+    height: 65vh;
+    border-radius: 0 0 0 50%;
 }
 .navItem{
+    position: relative;
+    top: 10px;
+    color: black;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: bold;
 }
-.nav_link{
-    color: var(--color4);
-}
-.nav_link.active{
+
+#navBox a.active{
     color: var(--color3);
-}
-#closeMenu{
-    align-self: flex-end;
-    margin-top: 10px;
-    margin-right: 10px;
-    cursor: pointer;
 }
      /* /header */
 
 /* slider */
 .slide-container{
     margin-bottom: 70px;
+    overflow-x: hidden;
+    overflow: hidden;
 }
 .wrapper-slider{
     max-width: 284px;
@@ -248,6 +250,8 @@ nav{
     max-width: 284px;
     margin: 0 auto;
     gap: 120px;
+    overflow-x: hidden;
+    overflow: hidden;
 }
 
         /* New Packages (reusable in other pages)*/
@@ -367,7 +371,7 @@ nav{
  }
  .footerLogo{
      position: relative;
-     left: 35px;
+     right: 10px;
  }
  .footer-contact-detail{
      display: flex;
@@ -377,13 +381,14 @@ nav{
      bottom: 25px;
  }
  .footer-contact-detail h1{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--color1);
+    padding-left: 20px;
  }
  .footer-contact-detail p{
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 100;
     color: var(--color1);
  }
  .footer-social-links{
@@ -395,9 +400,10 @@ nav{
      right: 4px;
  }
  .footer-social-links h1{
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     color: var(--color1);
+    padding-left: 20px;
  }
  .links{
      display: flex;
@@ -684,42 +690,53 @@ nav{
     
     /* Tablet */
 @media only screen and (min-width: 768px){
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 140px;
+}
+/*<sticky which is triggered using javascript>*/
+.scrolling-active{
+    background-color:#1A1A1A; /* changing the background of the header*/
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1); /* shadow under the header */
+    height: 150px;
+}
 .wrapper-header{
     max-width: 720px;
     margin: 0 auto;
     /* border: 2px solid blue; */
 }
-.logo-navbar{
+.head-logo{
     position: relative;
-    right: 40px;
-}
-#menu{
+    top: 20px;
+    right: 50px;
+} 
+#navBox.show{
     display: none;
 }
-#closeMenu{
-    display: none;
+#navBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    /* background-color: blue; */
+    position: relative;
+    bottom: 20px;
 }
-nav{
-    z-index: 99;
-    position: absolute;
-    top: 55px;
-    right: 0;
-    width: 61%;
-    height: 50px;
-    background-color: var(--backgroundColor);
-    transition: 0.5s;    
-    border-radius: 0; 
-}
-.navItems{
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-.nav_link{
+#navBox a{
+    display: block;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
     color: var(--color1);
 }
-
+#menuBtn{
+    display: none;
+}
+#closeBtn{
+    display: none;
+}
     /*Slider Banner */
 .wrapper-slider{
     max-width: 720px;
@@ -1074,14 +1091,33 @@ footer{
 @media only screen and (min-width: 1200px){
     /* header */
 header{
-    margin-bottom: 20px;
+    height: 170px;
+}
+/*<sticky which is triggered using javascript>*/
+.scrolling-active{
+    background-color:#1A1A1A; /* changing the background of the header*/
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1); /* shadow under the header */
+    height: 170px;
 }
 .wrapper-header{
     max-width: 1120px;
     margin: 0 auto;
 }
-.navItem{
+#navBox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    /* background-color: blue; */
+    position: relative;
+    bottom: 40px;
+}
+#navBox a{
+    display: block;
+    padding: 0px 15px;
+    margin-bottom: 10px;
     font-size: 18px;
+    color: var(--color1);
 }
     /* /header */
 
@@ -1175,8 +1211,8 @@ header{
     width: 289px;
     height: 329px;
     background-color: unset;
-    margin-bottom: 20px;
-}     
+    margin-bottom: 30px;
+}    
     /* /Upcoming */
 
     /* footer */
@@ -1211,6 +1247,9 @@ footer{
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 10px;
+ }
+ .footer-contact-detail p{
+    padding-left: 20px;
  }
  .footer-social-links h1{
      font-size: 28px;
