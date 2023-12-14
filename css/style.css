@@ -44,6 +44,9 @@ header{
     box-shadow: 0 3px 1rem rgba(0,0,0,.1); 
     height: 100px;
 }
+.scrolling-active .navItem{
+    color: #000000;
+}
 .wrapper-header{
     max-width: 284px;
     margin: 0 auto;
@@ -371,7 +374,7 @@ header{
  }
  .footerLogo{
      position: relative;
-     right: 10px;
+     left: 5px;
  }
  .footer-contact-detail{
      display: flex;
