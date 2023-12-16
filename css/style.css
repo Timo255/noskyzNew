@@ -57,7 +57,7 @@ header{
 .head-logo{
     position: relative;
     top: 10px;
-    right:  30px;
+    right:  50px;
 } 
 
 .logo-nav-div{
@@ -483,6 +483,7 @@ header{
     display: flex;
     flex-direction: column;
     gap: 80px;
+    margin-bottom: 50px;
 }
 .package{
     width: 284px;
@@ -947,6 +948,7 @@ footer{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 0px;
+    margin-bottom: 0px;
 }
 .package{
     width: 220px;
