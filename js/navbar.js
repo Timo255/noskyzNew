@@ -2,7 +2,7 @@ const menuBar = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const navbar = document.getElementById('navBox');
 const navItem = document.querySelectorAll('.navItem');
-const header = document.querySelector("header");     
+// const header = document.querySelector("header");     
       
     
 

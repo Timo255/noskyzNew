@@ -30,8 +30,6 @@ body{
 
   /* header */
 header{
-    /* background-color: var(--backgroundColor); */
-    /* background-color: blue; */
     width: 100%;
     height: 100px;
     position: sticky;
@@ -42,7 +40,7 @@ header{
 .scrolling-active{
     background-color:#1A1A1A; 
     box-shadow: 0 3px 1rem rgba(0,0,0,.1); 
-    height: 100px;
+    height: 120px;
 }
 .scrolling-active .navItem{
     color: #000000;
@@ -136,9 +134,13 @@ header{
     font-size: 15px;
     font-weight: bold;
     position: relative;
-    top: 70px;
-    left: 90px;
+    top: 80px;
+    left: 45px;
     color: var(--color3);
+}
+.wide{
+    position: relative;
+    left: 20px;
 }
 .btn{
     width: 100px;
@@ -286,7 +288,7 @@ header{
 .new{
     width: 270px;
     height: 330px;
-    margin-bottom: 75px;
+    margin-bottom: 130px;
 }
 .new a img{
     width: 100%;
@@ -295,7 +297,7 @@ header{
 .newH1{
     position: relative;
     top: 10px;
-    left: 80px;
+    left: 0px;
     font-size: 20px;
     font-weight: bold;
     color: var(--color3);
@@ -304,7 +306,7 @@ header{
 .newTxt{
     position: relative;
     top: 10px;
-    left: 50px;
+    left: 0px;
     font-size: 20px;
     font-weight: bold;
     color: var(--color1);
@@ -370,7 +372,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    gap: 10px;
  }
  .footerLogo{
      position: relative;
@@ -387,12 +389,15 @@ header{
     font-size: 18px;
     font-weight: 400;
     color: var(--color1);
-    padding-left: 20px;
+    padding-left: 80px;
+    position: relative;
+    left: 20px;
  }
  .footer-contact-detail p{
     font-size: 16px;
     font-weight: 100;
     color: var(--color1);
+     padding-left: 80px;
  }
  .footer-social-links{
      display: flex;
@@ -488,6 +493,7 @@ header{
 .package{
     width: 284px;
     height: 407px;
+    margin-bottom: 40px;
 }
 .package a img{
     width: 100%;
@@ -496,7 +502,7 @@ header{
 .packItemDetail{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 5px;
 }
 .packH1{
@@ -547,6 +553,9 @@ header{
     display: flex;
     flex-direction: column;
     gap: 50px;
+}
+.inclusive-exclusive a{
+    text-decoration: none;
 }
 .inclusive h1{
     margin-bottom: 10px;
@@ -766,7 +775,11 @@ header{
     font-weight: bold;
     position: relative;
     top: 170px;
-    left: 250px;
+    left: 180px;
+}
+.wide{
+    position: relative;
+    left: 160px;
 }
 .btn{
     width: 156px;
@@ -815,7 +828,7 @@ header{
 .new{
     width: 220px;
     height: 260px;
-    margin-bottom: 80px;
+    margin-bottom: 120px;
 }
 .newH1{
     position: relative;
@@ -953,7 +966,13 @@ footer{
 .package{
     width: 220px;
     height: 260px;
-    margin-bottom: 70px;
+    margin-bottom: 140px;
+}
+.packItemDetail{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 }   
     /* /Packages Section */
 
@@ -1017,9 +1036,9 @@ footer{
     color: var(--color1);
 }
 .btnBook{
-    width: 230px;
-    height: 70px;
-    font-size: 30px;
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
 }
     /* /image Detail */
     /* /Package Details Page*/
@@ -1096,13 +1115,17 @@ footer{
 @media only screen and (min-width: 1200px){
     /* header */
 header{
-    height: 170px;
+    height: 90px;
 }
 /*<sticky which is triggered using javascript>*/
 .scrolling-active{
     background-color:#1A1A1A; /* changing the background of the header*/
     box-shadow: 0 3px 1rem rgba(0,0,0,.1); /* shadow under the header */
-    height: 170px;
+    height: 110px;
+}
+.head-logo{
+    top: 5px;
+    right:  0px;
 }
 .wrapper-header{
     max-width: 1120px;
@@ -1115,7 +1138,7 @@ header{
     justify-content: flex-end;
     /* background-color: blue; */
     position: relative;
-    bottom: 40px;
+    bottom: 10px;
 }
 #navBox a{
     display: block;
@@ -1150,7 +1173,7 @@ header{
     font-weight: bold;
     position: relative;
     top: 180px;
-    left: 460px;
+    left: 350px;
     color: var(--color3);
 }
 .btn{
@@ -1236,16 +1259,20 @@ footer{
 }  
 .footerLogo{
     position: relative;
-    left: 90px;
+    top: 10px;
+    left: 100px;
 }  
 .footer-contact-detail{
     position: relative;
-    bottom: 50px;
-    right: 130px;
+    top: 10px;
+    /* bottom: 50px; */
+    right: 40px;
+    /* left: 5px; */
 }
 .footer-social-links{
     position: relative;
-    bottom: 50px;
+    top: 10px;
+    /* bottom: 50px; */
     right: 120px;
 }
 .footer-contact-detail h1{
@@ -1254,7 +1281,7 @@ footer{
     margin-bottom: 10px;
  }
  .footer-contact-detail p{
-    padding-left: 20px;
+    padding-left: 100px;
  }
  .footer-social-links h1{
      font-size: 28px;
@@ -1297,7 +1324,7 @@ footer{
 .package{
     width: 289px;
     height: 329px;
-    margin-bottom: 90px;
+    margin-bottom: 120px;
 }      
     /* /Package Page */
 
@@ -1327,6 +1354,11 @@ footer{
 }
 .exclusive p{
     font-size: 16px;
+}
+.btnBook{
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
 }
 
     /* /Package Detail Page */
@@ -1394,6 +1426,7 @@ footer{
 .btnSend{
     width: 290px;
     height: 65px;
+    margin-bottom: 30px;
 }   
     /* /ContuctUs Page */
 }
